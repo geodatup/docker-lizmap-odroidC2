@@ -12,7 +12,7 @@ RUN echo "deb    http://http.debian.net/debian jessie main " >> /etc/apt/sources
 #RUN gpg --keyserver pgpkeys.mit.edu --recv-key 7638D0442B90D010
 #RUN gpg -a --export 7638D0442B90D010 | sudo apt-key add -
 #RUN apt-get -y update
-RUN apt-get upgrade
+RUN apt-get dist-upgrade
 
 # Install 
 #RUN apt-get -t sid install -y --force-yes qgis-server
