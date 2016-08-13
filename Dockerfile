@@ -1,5 +1,5 @@
 
-FROM sdhibit/rpi-raspbian
+FROM ubuntu:14.04
 MAINTAINER Julien Ancelin / rpi_docker-qgis-server-lizmap
 #RUN  export DEBIAN_FRONTEND=noninteractive
 #ENV  DEBIAN_FRONTEND noninteractive
@@ -12,7 +12,7 @@ RUN echo "deb    http://http.debian.net/debian jessie main " >> /etc/apt/sources
 #RUN gpg --keyserver pgpkeys.mit.edu --recv-key 7638D0442B90D010
 #RUN gpg -a --export 7638D0442B90D010 | sudo apt-key add -
 #RUN apt-get -y update
-RUN apt-get dist-upgrade
+RUN apt-get remove debconf-i18n
 
 # Install 
 #RUN apt-get -t sid install -y --force-yes qgis-server
