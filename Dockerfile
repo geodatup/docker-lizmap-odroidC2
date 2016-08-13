@@ -24,7 +24,7 @@ RUN apt-get -y update
 #    php5-pgsql=5.6.24+dfsg-0+deb8u1
 #    
 #RUN a2dismod php5; a2enmod actions; a2enmod fcgid ; a2enmod ssl; a2enmod rewrite; a2enmod headers; \
-    a2enmod deflate; a2enmod php5
+#    a2enmod deflate; a2enmod php5
 #config compression
 #ADD mod_deflate.conf /etc/apache2/conf.d/mod_deflate.conf
 #config php5
