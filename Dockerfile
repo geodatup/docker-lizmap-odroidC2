@@ -1,5 +1,5 @@
 
-FROM aarch64/debian
+FROM whatever4711/armbian-build
 #MAINTAINER Julien Ancelin / rpi_docker-qgis-server-lizmap
 #RUN  export DEBIAN_FRONTEND=noninteractive
 #ENV  DEBIAN_FRONTEND noninteractive
