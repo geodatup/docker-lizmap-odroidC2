@@ -1,6 +1,6 @@
 
 FROM ubuntu:14.04
-MAINTAINER Julien Ancelin / rpi_docker-qgis-server-lizmap
+#MAINTAINER Julien Ancelin / rpi_docker-qgis-server-lizmap
 #RUN  export DEBIAN_FRONTEND=noninteractive
 #ENV  DEBIAN_FRONTEND noninteractive
 #RUN  dpkg-divert --local --rename --add /sbin/initctl
