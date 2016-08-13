@@ -1,5 +1,5 @@
 
-FROM whatever4711/armbian-build
+FROM peelsky/odroid-c2-archlinux
 #MAINTAINER Julien Ancelin / rpi_docker-qgis-server-lizmap
 #RUN  export DEBIAN_FRONTEND=noninteractive
 #ENV  DEBIAN_FRONTEND noninteractive
