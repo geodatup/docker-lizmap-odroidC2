@@ -1,23 +1,38 @@
 odroid C2 - docker-lizmap
 =========================
 
-![docker\_lizmap](https://cloud.githubusercontent.com/assets/6421175/5647770/4ac27af4-9689-11e4-809a-dce0c2d60b1c.png)
+ 
+
+ 
+
+~   docker\_lizmap
 
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
-Go to the WIKI (in french) for global installation of standalone server WebGIS
+Go to the doc (in french) for global installation of standalone server WebGIS
 with Docker, Postgresql/Postgis, Qgis-server and lizmap :
 
-https://github.com/jancelin/geo-poppy
+[RTD](http://cartodroid.readthedocs.io/en/latest/)
+
+LizMap is a complete QGIS webmap's publishing. It’s OpenSource. Many feature as
+editing and map printing.
+
+ 
 
 LizMap est une solution complète de publication de cartes QGIS sur Internet.
+Open source, Lizmap contient des fonctionnalités d’éditions de données et
+d’impressions de carte.
 
-LizMap is a complete Internet QGIS map publishing.
+ 
 
 lizmap-plugin-master / lizmap-web-client-3.0.1 / qgis-server-2.14.4
 ===================================================================
 
 First, install docker on odroid C2 :
+
+https://github.com/geodatup/[cartodroid](https://github.com/geodatup/cartodroid)/[script](https://github.com/geodatup/cartodroid/tree/master/script)/**install\_docker\_C2.sh**
+
+then QgisServer and Lizmap containers :
 
  
 
