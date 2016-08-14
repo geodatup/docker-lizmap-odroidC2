@@ -24,10 +24,10 @@ RUN apt-get  install -y  python-simplejson xauth htop vim curl ntp ntpdate \
     php5-pgsql=5.6.24+dfsg-0+deb8u1
 
 
-RUN echo "deb    http://http.debian.net/debian sid main " >> /etc/apt/sources.list
+#RUN echo "deb    http://http.debian.net/debian sid main " >> /etc/apt/sources.list
 
-RUN apt-get clean
-RUN apt-get update
+#RUN apt-get clean
+#RUN apt-get update
 RUN apt-get -t sid install -y --force-yes qgis-server
 
 RUN a2dismod php5; a2enmod actions; a2enmod fcgid ; a2enmod ssl; a2enmod rewrite; a2enmod headers; \
