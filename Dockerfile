@@ -25,6 +25,7 @@ RUN apt-get  install -y  python-simplejson xauth htop vim curl ntp ntpdate \
 
 
 RUN echo "deb    http://http.debian.net/debian sid main " >> /etc/apt/sources.list
+RUN apt-get clean
 RUN apt-get update
 RUN apt-get -t sid install -y --force-yes qgis-server
 
