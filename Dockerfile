@@ -25,8 +25,9 @@ RUN apt-get  install -y  python-simplejson xauth htop vim curl ntp ntpdate \
 
 
 RUN echo "deb    http://http.debian.net/debian sid main " >> /etc/apt/sources.list
+
 RUN apt-get clean
-RUN apt-get update
+#RUN apt-get update
 RUN apt-get -t sid install -y --force-yes qgis-server
 
 RUN a2dismod php5; a2enmod actions; a2enmod fcgid ; a2enmod ssl; a2enmod rewrite; a2enmod headers; \
