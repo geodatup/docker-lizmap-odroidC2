@@ -1,5 +1,5 @@
 
-FROM peelsky/odroid-c2-archlinux
+FROM aarch64/debian
 #MAINTAINER Julien Ancelin / rpi_docker-qgis-server-lizmap
 #RUN  export DEBIAN_FRONTEND=noninteractive
 #ENV  DEBIAN_FRONTEND noninteractive
