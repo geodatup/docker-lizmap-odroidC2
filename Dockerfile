@@ -22,7 +22,9 @@ RUN apt-get  install -y  python-simplejson xauth htop vim curl ntp ntpdate \
     libapache2-mod-fcgid=1:2.3.9-1+b1 libapache2-mod-php5=5.6.24+dfsg-0+deb8u1 \
     php5=5.6.24+dfsg-0+deb8u1 php5-common=5.6.24+dfsg-0+deb8u1 php5-cgi=5.6.24+dfsg-0+deb8u1 php5-curl=5.6.24+dfsg-0+deb8u1\
     php5-cli=5.6.24+dfsg-0+deb8u1 php5-sqlite=5.6.24+dfsg-0+deb8u1 php5-gd=5.6.24+dfsg-0+deb8u1\
-    php5-pgsql=5.6.24+dfsg-0+deb8u1 qgis-server
+    php5-pgsql=5.6.24+dfsg-0+deb8u1 
+
+#qgis-server
 
 
 # Add sid for qgisserver arm64
