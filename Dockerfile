@@ -10,6 +10,7 @@ RUN  dpkg-divert --local --rename --add /sbin/initctl
 #RUN gpg -a --export 8B48AD6246925553 | sudo apt-key add -
 #RUN gpg --keyserver pgpkeys.mit.edu --recv-key 7638D0442B90D010
 #RUN gpg -a --export 7638D0442B90D010 | sudo apt-key add -
+RUN echo "deb    http://http.debian.net/debian sid main " >> /etc/apt/sources.list
 RUN apt-get update
 
 # Install 
@@ -25,8 +26,6 @@ RUN apt-get  install -y  python-simplejson xauth htop vim curl ntp ntpdate \
 
 
 # Add sid for qgisserver arm64
-RUN echo "deb    http://http.debian.net/debian sid main " >> /etc/apt/sources.list
-RUN apt-get update
 RUN apt-get -t sid install -y --force-yes qgis-server
 
 
