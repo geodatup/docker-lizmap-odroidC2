@@ -10,11 +10,11 @@ RUN  dpkg-divert --local --rename --add /sbin/initctl
 #RUN gpg -a --export 8B48AD6246925553 | sudo apt-key add -
 #RUN gpg --keyserver pgpkeys.mit.edu --recv-key 7638D0442B90D010
 #RUN gpg -a --export 7638D0442B90D010 | sudo apt-key add -
-RUN echo "deb    http://http.debian.net/debian sid main " >> /etc/apt/sources.list
 RUN apt-get update
 
 # Install 
 
+RUN apt-get  install -y systemd
 RUN apt-get  install -y  python-simplejson xauth htop vim curl ntp ntpdate \ 
     python-software-properties git wget unzip \
     apache2=2.4.10-10+deb8u5 apache2-mpm-worker=2.4.10-10+deb8u5 apache2-mpm-prefork=2.4.10-10+deb8u5 \
@@ -24,11 +24,11 @@ RUN apt-get  install -y  python-simplejson xauth htop vim curl ntp ntpdate \
     php5-cli=5.6.24+dfsg-0+deb8u1 php5-sqlite=5.6.24+dfsg-0+deb8u1 php5-gd=5.6.24+dfsg-0+deb8u1\
     php5-pgsql=5.6.24+dfsg-0+deb8u1 
 
-#qgis-server
 
-
+RUN echo "deb    ftp.fr.debian.org/debian sid main " >> /etc/apt/sources.list
+RUN apt-get update
 # Add sid for qgisserver arm64
-#RUN apt-get -t sid install -y --force-yes qgis-server
+RUN apt-get -t sid install -y --force-yes qgis-server
 
 
 RUN a2dismod php5; a2enmod actions; a2enmod fcgid ; a2enmod ssl; a2enmod rewrite; a2enmod headers; \
