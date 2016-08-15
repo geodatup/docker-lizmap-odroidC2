@@ -1,10 +1,10 @@
 
 FROM aarch64/debian
 MAINTAINER Geodatup <geodatup@gmail.com>
-#RUN  export DEBIAN_FRONTEND=noninteractive
-#ENV  DEBIAN_FRONTEND noninteractive
-#RUN  dpkg-divert --local --rename --add /sbin/initctl
-# Add sid for qgisserver arm64
+RUN  export DEBIAN_FRONTEND=noninteractive
+ENV  DEBIAN_FRONTEND noninteractive
+RUN  dpkg-divert --local --rename --add /sbin/initctl
+
 
 #RUN gpg --keyserver pgpkeys.mit.edu --recv-key 8B48AD6246925553
 #RUN gpg -a --export 8B48AD6246925553 | sudo apt-key add -
@@ -24,11 +24,11 @@ RUN apt-get  install -y  python-simplejson xauth htop vim curl ntp ntpdate \
     php5-pgsql=5.6.24+dfsg-0+deb8u1
 
 
-#RUN echo "deb    http://http.debian.net/debian sid main " >> /etc/apt/sources.list
+# Add sid for qgisserver arm64
+RUN echo "deb    http://http.debian.net/debian sid main " >> /etc/apt/sources.list
+RUN apt-get update
+RUN apt-get -t sid install -y --force-yes qgis-server
 
-#RUN apt-get clean
-#RUN apt-get update
-#RUN apt-get -t sid install -y --force-yes qgis-server
 
 RUN a2dismod php5; a2enmod actions; a2enmod fcgid ; a2enmod ssl; a2enmod rewrite; a2enmod headers; \
     a2enmod deflate; a2enmod php5
