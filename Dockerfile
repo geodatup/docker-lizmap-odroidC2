@@ -25,7 +25,7 @@ RUN apt-get  install -y  python-simplejson xauth htop vim curl ntp ntpdate \
     php5-pgsql=5.6.24+dfsg-0+deb8u1 
 
 
-RUN echo "deb    ftp.fr.debian.org/debian sid main " >> /etc/apt/sources.list
+RUN echo "deb    http://ftp.fr.debian.org/debian sid main " >> /etc/apt/sources.list
 RUN apt-get update
 # Add sid for qgisserver arm64
 RUN apt-get -t sid install -y --force-yes qgis-server
