@@ -13,7 +13,7 @@ RUN  dpkg-divert --local --rename --add /sbin/initctl
 RUN echo "deb    http://ftp.fr.debian.org/debian sid main " >> /etc/apt/sources.list
 RUN apt-get update
 
-# Install 
+# Install  en spécifiant le nom de la distri pour apache python php etc... (jessie) : sinon erreur à l'install.
 
 RUN apt-get -t jessie install -y  python-simplejson xauth htop vim curl ntp ntpdate \ 
     python-software-properties git wget unzip \
@@ -25,7 +25,7 @@ RUN apt-get -t jessie install -y  python-simplejson xauth htop vim curl ntp ntpd
     php5-pgsql=5.6.24+dfsg-0+deb8u1 
 
 
-# Add sid for qgisserver arm64
+# Add en spécifiant le nom de la distri pour qgisserver arm64 (sid)
 RUN apt-get -t sid install -y --force-yes qgis-server
 
 
