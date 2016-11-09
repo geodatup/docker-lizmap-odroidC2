@@ -25,6 +25,10 @@ RUN apt-get -t jessie install -y  python-simplejson xauth htop vim curl ntp ntpd
     php5-pgsql=5.6.24+dfsg-0+deb8u1 
 
 
+# pour effectuer la redirection au proxy
+RUN apt-get install libapache2-mod-rpaf
+
+
 # Add en spécifiant le nom de la distri pour qgisserver arm64 (sid)
 RUN apt-get -t sid install -y --force-yes qgis-server
 
@@ -39,6 +43,10 @@ ADD php.conf /etc/apache2/conf.d/php.conf
 RUN rm -v /etc/apache2/mods-enabled/fcgid.conf
 # Copy a configuration file from the current directory
 ADD fcgid.conf /etc/apache2/mods-enabled/fcgid.conf
+
+# copy la conf pour la redirection proxy
+ADD rpaf.conf /etc/apache2/mods-enabled/rpaf.conf
+
 # Open port 80 & mount /home 
 EXPOSE 80
 # Mount /home (persistent data)
