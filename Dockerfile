@@ -12,7 +12,7 @@ RUN  dpkg-divert --local --rename --add /sbin/initctl
 #RUN gpg -a --export 7638D0442B90D010 | sudo apt-key add -
 RUN echo "deb    http://ftp.fr.debian.org/debian sid main " >> /etc/apt/sources.list
 RUN apt-get update
-RUN apt-get upgrade
+RUN apt-get upgrade -y
 
 # Install  en spécifiant le nom de la distri pour apache python php etc... (jessie) : sinon erreur à l'install.
 
