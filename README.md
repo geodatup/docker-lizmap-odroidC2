@@ -4,7 +4,7 @@ Lizmap
  
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-wget -P /home/GeoPoppy https://raw.githubusercontent.com/geodatup/docker-lizmap-odroidC2/lz3.0_qgs2.14/docker-compose.yml
+wget -P /home/GeoPoppy https://raw.githubusercontent.com/geodatup/docker-lizmap-odroidC2/lz3.1_qgs2.14.11/docker-compose.yml
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
  
