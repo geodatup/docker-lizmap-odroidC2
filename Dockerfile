@@ -10,10 +10,12 @@ RUN  dpkg-divert --local --rename --add /sbin/initctl
 #RUN gpg -a --export 8B48AD6246925553 | sudo apt-key add -
 #RUN gpg --keyserver pgpkeys.mit.edu --recv-key 7638D0442B90D010
 #RUN gpg -a --export 7638D0442B90D010 | sudo apt-key add -
-RUN echo "deb    http://ftp.fr.debian.org/debian sid main " >> /etc/apt/sources.list
-RUN apt-get update
-RUN apt-get upgrade -y --fix-missing
+RUN echo "deb   http://http.debian.net/debian sid main " >> /etc/apt/sources.list
+RUN apt-get -y update
 
+
+# Add en spécifiant le nom de la distri pour qgisserver arm64 (sid)
+RUN apt-get -t sid install -y --force-yes qgis-server
 # Install  en spécifiant le nom de la distri pour apache python php etc... (jessie) : sinon erreur à l'install.
 
 RUN apt-get -t jessie install -y  python-simplejson xauth htop vim curl ntp ntpdate \ 
@@ -26,8 +28,6 @@ RUN apt-get -t jessie install -y  python-simplejson xauth htop vim curl ntp ntpd
 RUN apt-get install libapache2-mod-rpaf
 
 
-# Add en spécifiant le nom de la distri pour qgisserver arm64 (sid)
-RUN apt-get -t sid install -y --force-yes qgis-server
 
 
 RUN a2dismod php5; a2enmod actions; a2enmod fcgid ; a2enmod ssl; a2enmod rewrite; a2enmod headers; \
