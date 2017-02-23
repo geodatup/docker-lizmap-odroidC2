@@ -19,11 +19,8 @@ RUN apt-get -t jessie install -y  python-simplejson xauth htop vim curl ntp ntpd
     python-software-properties git wget unzip \
     apache2=2.4.10-10+deb8u7 apache2-mpm-worker=2.4.10-10+deb8u7 apache2-mpm-prefork=2.4.10-10+deb8u7 \
     apache2-bin=2.4.10-10+deb8u7 apache2-data=2.4.10-10+deb8u7 \
-    libapache2-mod-fcgid=1:2.3.9-1+b1 libapache2-mod-php5=5.6.30+dfsg-0+deb8u1 \
-    php5=5.6.30+dfsg-0+deb8u1 php5-common=5.6.30+dfsg-0+deb8u1 php5-cgi=5.6.30+dfsg-0+deb8u1 php5-curl=5.6.30+dfsg-0+deb8u1\
-    php5-cli=5.6.30+dfsg-0+deb8u1 php5-sqlite=5.6.30+dfsg-0+deb8u1 php5-gd=5.6.30+dfsg-0+deb8u1\
-    php5-pgsql=5.6.30+dfsg-0+deb8u1
-
+    libapache2-mod-fcgid libapache2-mod-php5 php5 php5-common php5-cgi php5-curl\
+    php5-cli php5-sqlite php5-gd php5-pgsql
 # pour effectuer la redirection au proxy
 RUN apt-get install libapache2-mod-rpaf
 
